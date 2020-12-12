@@ -6,6 +6,7 @@ Created on Sun Nov 8
 
 """
 #%%
+
 from selenium import webdriver
 from time import sleep
 from bs4 import BeautifulSoup
@@ -71,7 +72,7 @@ except:
 def scrolldown(times,height): # 設定參數（次數與滑動單位）
     c=450 # 首次先給他滑一點點zZ，這很重要，滑太多會抓不到，自己去拿捏哦
     for i in range(times):
-        js = 'window.scrollTo(0,' + str(c) + ');'
+        js = 'window.scrollBy(0,' + str(c) + ');'
         c=height # 恢復到最初設定的單位
         browser.execute_script(js)
         sleep(1.5)

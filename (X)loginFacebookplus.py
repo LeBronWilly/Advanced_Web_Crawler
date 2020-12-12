@@ -41,9 +41,9 @@ sleep(1.5)
 def scrolldown(times):# scrolltimes代表頁面滾動的次數
     for i in range(times):
         if i == 0: # 當瀏覽器跑比較慢時，若一次拉到底會讀不到東西
-            js = 'window.scrollTo(0,3000);' # 要自己去拿捏
+            js = 'window.scrollBy(0,3000);' # 要自己去拿捏
         else:
-            js = 'window.scrollTo(0, document.body.clientHeight);'
+            js = 'window.scrollBy(0, document.body.clientHeight);'
         browser.execute_script(js) # 在目前的視窗畫面，執行javascript，使得每一次滑動都是滑到瀏覽器網頁的最下方
         sleep(1.5)
 
