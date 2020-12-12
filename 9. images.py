@@ -41,8 +41,8 @@ sleep(2)
 try:
     browser.find_element_by_partial_link_text("女士").click()
     sleep(1)
-    scrolldown(150,100)
-    scrolldown(100,150)
+    scrolldown(200,100)
+    # scrolldown(100,150)
     a = browser.page_source
 except:
     pass
