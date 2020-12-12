@@ -5,17 +5,10 @@ from bs4 import BeautifulSoup
 
 
 
-# 第3屆埔里跑 Puli Power 山城派對馬拉松  向善橋(約34K)
-#url = 'http://tw.running.biji.co/index.php?q=album&act=photo_list&album_id=30668&cid=5791&type=album&subtitle=第3屆埔里跑 Puli Power 山城派對馬拉松-向善橋(約34K)'
 
-# 第3屆埔里跑 Puli Power 山城派對馬拉松  在终點前80米
-#url = 'http://tw.running.biji.co/index.php?q=album&act=photo_list&album_id=30807&cid=5791&type=album&subtitle=第3屆埔里跑 Puli Power 山城派對馬拉松-在终點前80米'
+url = 'xxx'
 
-# Band 3e 竹北繞兩圈 - 活動開始 
-url = 'https://running.biji.co/index.php?q=album&act=photo_list&album_id=35782'
 
-# 台北馬拉松 - 2018台北馬拉松(半馬14K下塔悠公園陸橋下)
-#url="https://running.biji.co/index.php?q=album&act=photo_list&album_id=35665"
 
 
 #driver=webdriver.Chrome()
