@@ -108,6 +108,7 @@ except:
 #%%
 
 # 參考資料（並非都有使用到）：
+# https://www.w3schools.com/jsref/met_win_scrollby.asp
 # https://pydoing.blogspot.com/2011/01/python-try.html
 # http://hk.uwenku.com/question/p-qkncjsjr-nm.html
 # https://mlog.club/article/2332546
@@ -115,6 +116,8 @@ except:
 # https://qa.1r1g.com/sf/ask/703061131/
 # https://blog.techbridge.cc/2018/10/05/how-to-use-python-manipulate-excel-spreadsheet/
 # https://newaurora.pixnet.net/blog/post/228244997-python-%E8%B3%87%E6%96%99%E5%AD%98%E6%88%90excel%E6%AA%94
+
+
 
 
 # firefox_options = webdriver.FirefoxOptions()

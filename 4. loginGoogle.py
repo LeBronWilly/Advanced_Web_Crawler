@@ -33,7 +33,7 @@ sleep(1.5)
 2. find_element_by_class_name()：用class屬性查詢符合的元素（class屬性若有空格要加.）
 3. find_element_by_link_text()：用超連結的文字查詢符合的元素
 4. find_element_by_partial_link_text()：用超連結的部分文字查詢符合的元素
-5. find_element_by_xpath()：以XML的路徑查詢（全名為XML Path），XPath是利用節點的樹狀關係，以及每個節點的特性來查詢符合的元素（簡單來說，類似就是利用絕對位置及相對位置去找，也可以用手刻的，方便使用但可能抓失敗，未來操作也可能會跑錯）
+5. find_element_by_xpath()：以XML的路徑查詢（全名為XML Path），XPath是利用節點的樹狀關係，以及每個節點的特性來查詢符合的元素（簡單來說，類似就是利用絕對位置及相對位置去找，也可以用手刻的，方便使用但有機率會抓失敗）
 PS. Chrome可以下載擴充套件ChroPath，輕鬆取得XPath
 
 6. find_element_by_tag_name()：用標籤名稱查詢符合的元素
@@ -63,11 +63,9 @@ sleep(1.5)
 #%% 搜尋引擎-關鍵字搜尋
 
 browser.find_element_by_class_name("gLFyf.gsfi").send_keys(keyword)
-# browser.find_element_by_xpath("//*[@id='tsf']/div[2]/div[1]/div[1]/div/div[2]/input").send_keys(keyword) ### 相對Xpath
-# browser.find_element_by_xpath("/html/body/div[2]/div[2]/form/div[2]/div[1]/div[1]/div/div[2]/input").send_keys(keyword) ### 絕對Xpath
+# browser.find_element_by_xpath("//*[@id='tsf']/div[2]/div[1]/div[1]/div/div[2]/input").send_keys(keyword) ### 使用相對Xpath
+# browser.find_element_by_xpath("/html/body/div[2]/div[2]/form/div[2]/div[1]/div[1]/div/div[2]/input").send_keys(keyword) ### 使用絕對Xpath
 # browser.find_element_by_xpath("//input[@class='gLFyf gsfi']").send_keys(keyword) ### 自己判斷手打(其實這個算蠻好用的)
-
-
 sleep(1.5)
 
 browser.find_element_by_class_name("gNO89b").click()
