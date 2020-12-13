@@ -3,7 +3,7 @@
 Created on Sun Dec 13 01:40:26 2020
 
 @author: Willy Fang
-
+# 講解方法+自由操作
 """
 #%%
 
@@ -27,7 +27,6 @@ def scrolldown(times, height): # 設定參數（次數與滑動單位）
         sleep(0.1)
 
 keyword="裙子"
-
 
 browser = webdriver.Chrome(options=chrome_options)
 # browser.maximize_window()

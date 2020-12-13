@@ -3,7 +3,7 @@
 Created on Sat Oct 10
 
 @author: Willy Fang
-
+# 講解方法
 """
 #%%
 
@@ -13,8 +13,8 @@ from bs4 import BeautifulSoup
 
 ### 變數宣告
 url = 'http://www.google.com'
-email="XXXXX@gmail.com"
-password="xxxxxx"
+email="XXX@gmail.com"
+password="XXX"
 keyword="NTUST BA"
 
 
@@ -72,7 +72,7 @@ browser.find_element_by_class_name("gNO89b").click()
 sleep(1.5)
 
 ### 定位目標網頁
-browser.find_element_by_partial_link_text("台科大").click()
+browser.find_element_by_partial_link_text("科技大學").click()
 sleep(1)
 
 try:

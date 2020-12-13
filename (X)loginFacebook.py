@@ -27,8 +27,8 @@ browser.get(url)
 # find_element:抓取第一個符合ㄉ
 # find_elements:抓取所有符合ㄉ
 
-email="w70024@gmail.com"
-password="lebron230613"
+email="XXX@gmail.com"
+password="XXX"
 
 browser.find_element_by_id('email').clear()
 browser.find_element_by_id('email').send_keys(email)

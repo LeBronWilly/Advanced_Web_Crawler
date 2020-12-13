@@ -3,6 +3,7 @@
 Created on Mon Nov 16
 
 @author: Willy Fang
+# 講解方法
 
 Python3有內建一個嵌入式的資料庫（DB）：SQLite，它使用一個文件儲存整個DB，操作方便，可以使用SQL指令管理DB，完成資料表（DT）的增刪改查
 """

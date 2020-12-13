@@ -3,7 +3,7 @@
 Created on Sat Dec 12 01:51:33 2020
 
 @author: Willy Fang
-
+# 講解方法+自由操作
 """
 #%%
 
@@ -18,16 +18,10 @@ def get_PTT_onepage(URL): # 參數是一個網址字串
     ptt_html = requests.get(URL, headers = my_headers) # 發送get請求到PTT版
     pttbs4 = BeautifulSoup(ptt_html.text, "html.parser") # 解析HTML
     # 由於.select()會回傳List，需要使用for迴圈將逐筆取出
-
-    # 做法1
-    # for t in pttbs4.select(".title a"):
-    #     print(t.string) # 把各標籤的文字內容萃取出來
-    #     PTT_multipages_titles.append(t.string)
-
-    # 做法2
-    for t in pttbs4.find_all("div", {"class" : "title"}):
-        print(t.find("a").string) # 二次過濾，把各標籤的文字內容萃取出來
+    for t in pttbs4.select(".title a"):
+        print(t.string) # 把各標籤的文字內容萃取出來
         PTT_multipages_titles.append(t.string)
+
 
 
 #%%

@@ -3,15 +3,15 @@
 Created on Sat Nov 14
 
 @author: Willy Fang
+# 講解方法
 
-Python3有內建一個嵌入式的資料庫（DB）：SQLite，它使用一個文件儲存整個DB，操作方便，可以使用SQL指令管理DB，完成資料表（DT）的增刪改查
+Python3有內建一個嵌入式的資料庫（DB）：SQLite，它使用一個文件儲存整個DB，操作方便，可以在Python使用SQL指令管理DB，完成資料表（DT）的增刪改查（CRUD）
 """
 #%%
 
 import sqlite3, requests, os
 import json
 # from selenium import webdriver
-# import ast ; from bs4 import BeautifulSoup
 
 
 current_path = os.path.dirname(__file__) # 取得目前路徑，儲存DB用

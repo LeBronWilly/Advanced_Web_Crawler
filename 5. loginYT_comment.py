@@ -3,7 +3,7 @@
 Created on Sun Nov 8
 
 @author: Willy Fang
-
+# 講解方法+自由操作
 """
 #%%
 
@@ -29,8 +29,9 @@ browser.get(url)
 sleep(2)
 
 #%% 登入哦
-# email="XXXXX@gmail.com"
-# password="xxxxxx"
+
+# email="XXX@gmail.com"
+# password="XXX"
 
 # browser.find_element_by_class_name('style-scope.ytd-masthead.style-suggestive.size-small').click()
 # sleep(1.5)
@@ -70,22 +71,21 @@ except:
 
 # 建立往下滑動的funcation（使用javascript）
 def scrolldown(times,height): # 設定參數（次數與滑動單位）
-    c=450 # 首次先給他滑一點點zZ，這很重要，滑太多會抓不到，自己去拿捏哦
     for i in range(times):
-        js = 'window.scrollBy(0,' + str(c) + ');'
-        c=height # 恢復到最初設定的單位
+        js = 'window.scrollBy(0,' + str(height) + ');'
         browser.execute_script(js)
-        sleep(1.5)
-scrolldown(7,20000) # height也是自己去拿捏哦
+        sleep(0.005) # 自己去調整
+scrolldown(150,100) # 自己去調整
 
+sleep(3)
 
 myExcel = Workbook() # 用python建立一個Excel空白活頁簿
 sheet = myExcel.active # 建立一個工作中的表單
 sheet['A1'] = 'Comments' # 填入第一列的欄位名稱
 
 soup = BeautifulSoup(browser.page_source, "html.parser")
-# comments = soup.find_all("yt-formatted-string", class_='style-scope ytd-comment-renderer', attrs={'id':'content-text'})
 comments = soup.select("#content-text")
+# comments = soup.find_all("yt-formatted-string", class_='style-scope ytd-comment-renderer', attrs={'id':'content-text'}) # 最精細的寫法
 comments_list = comments.copy() # 可以額外copy一份，能夠以免動到原本的
 for i in comments:
     print(i.text)
@@ -109,6 +109,7 @@ except:
 
 # 參考資料（並非都有使用到）：
 # https://www.w3schools.com/jsref/met_win_scrollby.asp
+# https://dotblogs.com.tw/aquarius6913/2011/01/03/20538
 # https://pydoing.blogspot.com/2011/01/python-try.html
 # http://hk.uwenku.com/question/p-qkncjsjr-nm.html
 # https://mlog.club/article/2332546
@@ -123,3 +124,7 @@ except:
 # firefox_options = webdriver.FirefoxOptions()
 # browser = webdriver.Firefox(options=firefox_options)
 # firefox_options.set_preference("profile.default_content_setting_values.notifications",2)
+
+    # c=450 # 首次先給他滑一點點zZ，這很重要，滑太多會抓不到，自己去拿捏哦
+
+        # c=height # 恢復到最初設定的單位

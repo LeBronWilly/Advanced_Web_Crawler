@@ -3,7 +3,7 @@
 Created on Sat Nov 28 
 
 @author: Willy Fang
-
+# 講解方法+自由操作
 """
 #%% 前置作業
 
