@@ -38,21 +38,17 @@ conn.commit()
 #%%
 
 n=1
-for site in jsondata[:10]:
+for site in jsondata[:50]: # 只取前50個地點
     Name=site["Name"]
     Address=site["Add"]
     Longitude=site["Px"]
     Latitude=site["Py"]
-    Desc=str(site["Toldescribe"])
+    Desc=str(site["Toldescribe"]).replace("'", "’")
     print("Name:{}".format(Name))
     
-    try:
-        sqlstr='insert into TableSightSeeing values({},"{}","{}",{},{},"{}")' .format(n,Name,Address,Longitude,Latitude,Desc) # 換個方式寫
-        cursor.execute(sqlstr)
-    except: # 還是會有部分資料有問題......
-        Desc=str(site["Toldescribe"]).replace("'", "’")
-        sqlstr="insert into TableSightSeeing values({},'{}','{}',{},{},'{}')" .format(n,Name,Address,Longitude,Latitude,Desc) # 換個方式寫
-        cursor.execute(sqlstr)
+    sqlstr='insert into TableSightSeeing values({},"{}","{}",{},{},"{}")' .format(n,Name,Address,Longitude,Latitude,Desc) # 換個方式寫
+    cursor.execute(sqlstr)
+
 
     conn.commit()
     n+=1
@@ -64,3 +60,14 @@ conn.close()
 #%%
 
 '🙏內推/工作機會邀約懇請私訊小盒子或領英👻'
+"🙏內推/工作機會邀約懇請私訊小盒子或領英👻"
+
+
+#%%
+
+    # try:
+        
+    # except: # 還是會有部分資料有問題......
+    #     Desc=str(site["Toldescribe"])
+    #     sqlstr="insert into TableSightSeeing values({},'{}','{}',{},{},'{}')" .format(n,Name,Address,Longitude,Latitude,Desc) # 換個方式寫
+    #     cursor.execute(sqlstr)

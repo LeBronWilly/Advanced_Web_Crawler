@@ -3,7 +3,7 @@
 Created on Sat Nov 14
 
 @author: Willy Fang
-
+# 講解方法+自由操作
 """
 #%%   <------劃分cell用的
 
