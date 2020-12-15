@@ -18,8 +18,8 @@ import pandas as pd
 # https://www.google.com/maps/place/國立中央大學/@24.9678305,121.1927946,17z/data=!4m7!3m6!1s0x0:0xcdc129d4455ce456!8m2!3d24.9678305!4d121.1949833!9m1!1b1
 
 # 可以發現Google Maps的評論的每一個XHR的Request URL都是有結構化的
-url_a = 'XXX' # Request URL的上半
-url_b = 'XXX' # Request URL的下半
+url_a = 'https://www.google.com/maps/preview/review/listentitiesreviews?authuser=0&hl=zh-TW&gl=tw&pb=!1m2!1y3776307603354701259!2y14826177439953904726!2m2!1i' # Request URL的上半
+url_b = '!2i10!3e1!4m5!3b1!4b1!5b1!6b1!7b1!5m2!1saZfYX8X7N5iK0ASVmbewCg!7e81' # Request URL的下半
 
 
 # 每一個Request URL即代表一個XHR
@@ -34,7 +34,7 @@ num = 0 # 負責用來中間拼湊完整的URL(這個可以不用宣告起來)
 # 由於它每一個XHR本身一次就是抓10則評論，因此step參數即設為10
 for num in range(0, 30, 10): # 會跑num = 0、10、20的迴圈
     # 組合成完整的URL，並發送get請求
-    original_text = requests.get(url_a + str(num) + url_b).text 
+    original_text = requests.get(url_a + str(num) + url_b).text # 原始的網頁的 HTML碼
     # 以下為資料處理original_text
     special_char = ')]}\'' # 特殊字元
     # 拿掉特殊字元，這個字元是為了資安而設定的
